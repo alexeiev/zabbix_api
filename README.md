@@ -16,12 +16,24 @@ Para utilizar o script, deverá deverá clonar o projeto:
 ```bash
 git clone https://github.com/alexeiev/zabbix_api.git
 ```
+### Criando ambiente virtual para o Python
+
+```bash
+cd zabbix_api
+python3 -m venv .venv
+```
+
+Agora vamos ativar o ambiente Virtal
+
+```bash
+source .venv/bin/activate
+```
 
 ### Instalando dependências
 ```bash
 pip3 install -r requirements.txt
 ```
-criar ficheiro de env
+criar ficheiro de environment
 
 ```bash
 cat << EOF >> .env 
@@ -73,4 +85,9 @@ srv-bd04 | 10.0.0.13
 
 ```bash
 ./main.py --file lista2.csv --title name
+```
+
+**Ao Finalizar, desativar o ambiente virtual com o seguinte comando**
+```bash
+deactivate
 ```
